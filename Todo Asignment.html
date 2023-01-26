@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <form>
+    <input type="text" id="task" placeholder="Enter task">
+    <button type="button" onclick="addTask()">Add Task</button>
+
+    <ul id="task-list">
+      <li><button class="delete-btn">Delete</button></li>
+    </ul>
+   
+  </form>
+ 
+ <script>
+   
+function addTask() {
+var task = document.getElementById("task").value;
+var taskList = document.getElementById("task-list");
+var newTask = document.createElement("li");
+var deleteBtns = document.getElementsByClassName("delete-btn");
+newTask.innerHTML = task;
+taskList.appendChild(newTask);
+document.getElementById("task").value = "";
+
+
+}
+ </script>
+
+</body>
+</html>
+
+
+
+
+
+
